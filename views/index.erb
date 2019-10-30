@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
 
-<body>
-  <h1>Hello Sinatra</h1>
-  <%if @name%>
-    <h2>Welcome <%=@name%></h2>
-  <%end%>
-</body>
-</html>
+<h1>Battle!</h1>
+
+<h2>Sign in to play</h2>
+<form action="/names" method="post">
+  <label for="player_1_name">
+    Player 1 Name: 
+    <input type="text" name="player_1_name">
+  </label>
+    <label for="player_1=2_name">
+    Player 2 Name: 
+    <input type="text" name="player_2_name">
+  </label>
+  <input type="submit" value="Submit">
+</form>
