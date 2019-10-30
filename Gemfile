@@ -3,4 +3,5 @@ source 'https://rubygems.org' do
   gem 'rspec'
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'shotgun'
 end
