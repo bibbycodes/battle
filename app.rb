@@ -12,6 +12,7 @@ class Battle < Sinatra::Base
   post '/names' do # Post
     # setting the player names into the session hash as an intermediary
     # Post/Redirect/Get
+    $game = Game.new
     $player1 = Player.new(params[:player_1_name])
     $player2 = Player.new(params[:player_2_name])
     redirect '/play' # Redirect
@@ -27,7 +28,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     @player_1_name = $player1.name
     @player_2_name = $player2.name
-    $player1.attack($player2)
+    $game.attack($player2)
     erb(:attack)
   end
 
